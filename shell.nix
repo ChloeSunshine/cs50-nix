@@ -24,7 +24,11 @@ in pkgs.mkShell rec {
     unset SOURCE_DATE_EPOCH
     pip install --upgrade pip
     pip install check50
-  '';  
+  '';
+
+  shellHook = ''
+    export LDLIBS="-lcs50"
+  '';
 
   postShellHook = ''
     # allow pip to install wheels
