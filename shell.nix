@@ -1,7 +1,7 @@
 with import <nixpkgs> { };
 
 let
-  pythonPackages = python310Packages;
+  pythonPackages = python3Packages;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) { };
 in pkgs.mkShell rec {
   name = "impurePythonEnv";
