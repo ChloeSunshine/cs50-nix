@@ -1,4 +1,4 @@
-# cs50-nix-shell
+# cs50-nix
 
 A NixOS-friendly development environment for [Harvard's CS50](https://cs50.harvard.edu/), forked from [t-spr/cs50-nix-shell](https://github.com/t-spr/cs50-nix-shell) and updated to work on current nixpkgs.
 
