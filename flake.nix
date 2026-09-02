@@ -34,6 +34,7 @@
           '';
           shellHook = ''
             export LDLIBS="-lcs50"
+            export LD_LIBRARY_PATH="${pkgs.libcs50}/lib:$LD_LIBRARY_PATH"
           '';
           postShellHook = ''
             unset SOURCE_DATE_EPOCH
