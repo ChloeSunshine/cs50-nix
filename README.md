@@ -9,7 +9,7 @@ Provides `gcc`, `clang`, `gdb`, `valgrind`, `make`, `libcs50`, and a Python venv
 ```bash
 nix develop github:ChloeSunshine/cs50-nix
 ```
-or
+or (less consistent)
 ```bash
 nix-shell https://github.com/ChloeSunshine/cs50-nix/archive/main.tar.gz
 ``` 
