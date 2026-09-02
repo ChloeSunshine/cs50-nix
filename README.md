@@ -18,7 +18,7 @@ This drops you into a shell with everything CS50 expects on `$PATH`, and activat
 
 You will need an editor. You can use VSCode as they did in the video. I'm using zed because it has a vim mode, and I like neovim.
 
-I'm currently going through the course with [this](https://www.youtube.com/watch?v=gmuTjeQUbTM) shell, and will update it further if any issues occur. I followed this course. Happy learning!
+I'm currently going through [this](https://www.youtube.com/watch?v=gmuTjeQUbTM) course with this shell, and will update it further if any issues occur. I followed this course. Happy learning!
 
 ## License
 
