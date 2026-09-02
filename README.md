@@ -7,12 +7,13 @@ Provides `gcc`, `clang`, `gdb`, `valgrind`, `make`, `libcs50`, and a Python venv
 ## Usage
 
 ```bash
-nix-shell https://github.com/ChloeSunshine/cs50-nix-shell/archive/main.tar.gz
+nix develop github:ChloeSunshine/cs50-nix-shell
 ```
-or 
+or
 ```bash
-nix develop --refresh --no-write-lock-file github:ChloeSunshine/cs50-nix-shell
-```
+nix-shell https://github.com/ChloeSunshine/cs50-nix-shell/archive/main.tar.gz
+``` 
+
 This drops you into a shell with everything CS50 expects on `$PATH`, and activates a Python venv (`./.venv`) with `check50` installed. Once inside, compiling works exactly like the CS50 IDE
 
 ## License
