@@ -13,9 +13,8 @@ in pkgs.mkShell rec {
     pkgs.glibc
     pkgs.gnumake
     pkgs.valgrind
+    pkgs.sqlite
     pythonPackages.python
-    # This executes some shell code to initialize a venv in $venvDir before
-    # dropping into the shell
     pythonPackages.venvShellHook
     pythonPackages.pip
   ];
@@ -23,7 +22,7 @@ in pkgs.mkShell rec {
   postVenvCreation = ''
     unset SOURCE_DATE_EPOCH
     pip install --upgrade pip
-    pip install check50
+    pip install check50 style50 submit50 cs50 flask flask-session
   '';
 
   shellHook = ''
@@ -32,6 +31,6 @@ in pkgs.mkShell rec {
 
   postShellHook = ''
     # allow pip to install wheels
-    unset SOURCE_DATE_EPOCH/
+    unset SOURCE_DATE_EPOCH
   '';
 }
