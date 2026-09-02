@@ -33,6 +33,7 @@
             pip install check50
           '';
           shellHook = ''
+            export MAKEFLAGS="-s"
             export LDLIBS="-l:libcs50.a"
             export LD_LIBRARY_PATH="${pkgs.libcs50}/lib:$LD_LIBRARY_PATH"
           '';
