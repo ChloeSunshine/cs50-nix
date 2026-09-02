@@ -13,7 +13,7 @@
         };
         pythonPackages = pkgs.python3Packages;
       in rec {
-        devShells.system.default = pkgs.mkShell {
+        devShells.${system}.default = pkgs.mkShell {
           name = "impurePythonEnv";
           venvDir = "./.venv";
           buildInputs = [
