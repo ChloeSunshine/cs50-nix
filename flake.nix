@@ -35,6 +35,25 @@
           shellHook = ''
             export LDLIBS="-l:libcs50.a"
             export LD_LIBRARY_PATH="${pkgs.libcs50}/lib:$LD_LIBRARY_PATH"
+            #COMPLETELY UNTESTED START
+            case "$TERM_PROGRAM" in
+              vscode)
+                command -v code >/dev/null 2>&1 && export EDITOR="code --wait"
+                ;;
+              zed)
+                command -v zed >/dev/null 2>&1 && export EDITOR="zed"
+                ;;
+            esac
+
+            code() {
+              touch -- "$1"
+              if [ -n "$EDITOR" ]; then
+                "$EDITOR" "$1"
+              else
+                echo "Created $1 — set \$EDITOR (e.g. export EDITOR=zed) to have 'code' open it automatically next time."
+              fi
+            }
+          #END
           '';
           postShellHook = ''
             unset SOURCE_DATE_EPOCH
